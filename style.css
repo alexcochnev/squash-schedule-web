@@ -1,0 +1,27 @@
+#menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px auto 100px auto;
+}
+
+#date_min {
+    margin-right: 20px;
+}
+
+#schedule {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+table {
+    border: 3px solid grey;
+    margin:0;
+    border-collapse: collapse
+}
+th, td {
+   border: 1px solid grey;
+}
