@@ -3,11 +3,27 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     margin: 50px auto 100px auto;
 }
 
-#date_min {
+#checkBox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
     margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+#dateMin,#dateMax {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    height: 24px;
+}
+
+#submitButton {
+    height: 24px;
 }
 
 #schedule {
@@ -20,7 +36,8 @@
 table {
     border: 3px solid grey;
     margin:0;
-    border-collapse: collapse
+    border-collapse: collapse;
+    margin-bottom: 10px;
 }
 th, td {
    border: 1px solid grey;

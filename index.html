@@ -1,0 +1,75 @@
+<html lang="ru-RU" xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/main.js"></script>
+    <title>Сквош расписание</title>
+</head>
+<body>
+    <form id="menu">
+        <label for="dateMin"></label><input type="date" id="dateMin" name="dateMin">
+        <label for="dateMax"></label><input type="date" id="dateMax" name="dateMax">
+        <div id="checkBox">
+            <div>
+                <input type="checkbox" id="checkDubrovka" name="checkDubrovka"><label for="checkDubrovka">Дубровка</label>
+            </div>
+            <div>
+                <input type="checkbox" id="checkShabolovka" name="checkShabolovka"><label for="checkShabolovka">Шаболовка</label>
+            </div>
+            <div>
+                <input type="checkbox" id="checkLeninka" name="checkLeninka"><label for="checkLeninka">Ленинка</label>
+            </div>
+        </div>
+        <input type="button" onclick="apiRequest()" id="submitButton" value="Хочу знать всё!">
+    </form>
+    <div id="schedule">
+        <table id="dubrovka">
+            <caption>Дубровка</caption>
+            <thead>
+                <tr>
+                    <th>date</th>
+                    <th>week</th>
+                    <th>17:00</th>
+                    <th>18:00</th>
+                    <th>19:00</th>
+                    <th>20:00</th>
+                    <th>21:00</th>
+                    <th>22:00</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <table id="leninka">
+            <caption>Ленинка</caption>
+            <thead>
+                <tr>
+                    <th>date</th>
+                    <th>week</th>
+                    <th>17:00</th>
+                    <th>18:00</th>
+                    <th>19:00</th>
+                    <th>20:00</th>
+                    <th>21:00</th>
+                    <th>22:00</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <table id="shabolovka">
+            <caption>Шаболовка</caption>
+            <thead>
+                <tr>
+                    <th>date</th>
+                    <th>week</th>
+                    <th>17:00</th>
+                    <th>18:00</th>
+                    <th>19:00</th>
+                    <th>20:00</th>
+                    <th>21:00</th>
+                    <th>22:00</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</body>
+</html>
