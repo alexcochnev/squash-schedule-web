@@ -48,7 +48,16 @@ async function requestLeninka() {
 }
 
 function apiRequest() {
-    requestDubrovka()
-    requestShabolovka()
-    requestLeninka()
+    let checkDubrovka = d.getElementById('checkDubrovka');
+    let checkShabolovka = d.getElementById('checkShabolovka');
+    let checkLeninka = d.getElementById('checkLeninka');
+    if (checkDubrovka.checked) {
+        requestDubrovka()
+    }
+    if (checkShabolovka.checked) {
+        requestShabolovka()
+    }
+    if (checkLeninka.checked) {
+        requestLeninka()
+    }
 }
