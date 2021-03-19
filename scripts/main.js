@@ -8,7 +8,10 @@ function rowInsert(json, tbody) {
     rowArray.forEach(function(item, i, arr) {
         let td = d.createElement("TD");
         row.appendChild(td);
-        td.innerHTML = json[item]
+        if (json[item] === 1) td.innerHTML = '+'
+        else if (json[item] === 0) td.innerHTML = '-'
+        else td.innerHTML = json[item];
+
     });
 }
 
