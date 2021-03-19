@@ -44,3 +44,7 @@ table {
 th, td {
    border: 1px solid grey;
 }
+
+caption {
+    margin-bottom: 10px;
+}
