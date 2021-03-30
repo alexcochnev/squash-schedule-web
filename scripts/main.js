@@ -1,11 +1,15 @@
 let d = document;
 
+window.onload = async function() {
+    await fetch('http://squashschedule.herokuapp.com/leninka_days/');
+}
+
 function rowInsert(json, tbody) {
     let row = d.createElement("TR");
     tbody.appendChild(row);
 
     let rowArray = ['date', 'week', '17', '18', '19', '20', '21', '22']
-    rowArray.forEach(function(item, i, arr) {
+    rowArray.forEach(function(item) {
         let td = d.createElement("TD");
         row.appendChild(td);
         if (json[item] === 1) td.innerHTML = '+'
