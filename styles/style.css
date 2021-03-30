@@ -1,5 +1,12 @@
 body {
     font-family: "Tahoma", sans-serif;
+    margin: 0 auto;
+}
+
+@media(max-width:767px){
+    body{
+        max-width: 493px;
+    }
 }
 
 #menu {
