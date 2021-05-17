@@ -27,6 +27,14 @@ async function requestDubrovka(date) {
     rowInsert(jsonResp,tbody)
 }
 
+async function requestTula(date) {
+    let response = await fetch('http://squashschedule.herokuapp.com/tula_day/?date=' + date);
+    let jsonResp = await response.json();
+
+    let tbody = d.getElementById('tula').getElementsByTagName('TBODY')[0];
+    rowInsert(jsonResp,tbody)
+}
+
 async function requestShabolovka(date) {
     let response = await fetch('http://squashschedule.herokuapp.com/shabolovka_day/?date=' + date);
     let jsonResp = await response.json();
@@ -48,6 +56,7 @@ async function requestLeninka(date) {
 async function apiRequest() {
     let dateMax = new Date(d.getElementById('dateMax').value);
     let checkDubrovka = d.getElementById('checkDubrovka');
+    let checkTula = d.getElementById('checkTula');
     let checkShabolovka = d.getElementById('checkShabolovka');
     let checkLeninka = d.getElementById('checkLeninka');
 
@@ -67,6 +76,16 @@ async function apiRequest() {
         dateMin2.setDate(dateMin2.getDate()+1)
         while (dateMin2<=dateMax) {
             await requestShabolovka(dateMin2.toISOString().substr(0,10));
+            dateMin2.setDate(dateMin2.getDate()+1)
+        }
+    }
+
+    if (checkTula.checked) {
+        let dateMin2 = new Date(d.getElementById('dateMin').value);
+        await requestTula(dateMin2.toISOString().substr(0,10));
+        dateMin2.setDate(dateMin2.getDate()+1)
+        while (dateMin2<=dateMax) {
+            await requestTula(dateMin2.toISOString().substr(0,10));
             dateMin2.setDate(dateMin2.getDate()+1)
         }
     }
