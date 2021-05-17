@@ -20,9 +20,10 @@
         <input type="button" onclick="apiRequest()" id="submitButton" value="Покажи!">
     </div>
     <div id="schedule">
-        <table id="dubrovka">
-            <caption>Дубровка</caption>
-            <thead>
+        <div class="schedule_block">
+            <table id="leninka">
+                <caption>Ленинка</caption>
+                <thead>
                 <tr>
                     <th>Дата</th>
                     <th>День недели</th>
@@ -33,28 +34,12 @@
                     <th>21:00</th>
                     <th>22:00</th>
                 </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-        <table id="tula">
-            <caption>Тульская</caption>
-            <thead>
-            <tr>
-                <th>Дата</th>
-                <th>День недели</th>
-                <th>17:00</th>
-                <th>18:00</th>
-                <th>19:00</th>
-                <th>20:00</th>
-                <th>21:00</th>
-                <th>22:00</th>
-            </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-        <table id="leninka">
-            <caption>Ленинка</caption>
-            <thead>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <table id="shabolovka">
+                <caption>Шаболовка</caption>
+                <thead>
                 <tr>
                     <th>Дата</th>
                     <th>День недели</th>
@@ -65,12 +50,15 @@
                     <th>21:00</th>
                     <th>22:00</th>
                 </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-        <table id="shabolovka">
-            <caption>Шаболовка</caption>
-            <thead>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div class="schedule_block">
+            <table id="tula">
+                <caption>Тульская</caption>
+                <thead>
                 <tr>
                     <th>Дата</th>
                     <th>День недели</th>
@@ -81,9 +69,26 @@
                     <th>21:00</th>
                     <th>22:00</th>
                 </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <table id="dubrovka">
+                <caption>Дубровка</caption>
+                <thead>
+                    <tr>
+                        <th>Дата</th>
+                        <th>День недели</th>
+                        <th>17:00</th>
+                        <th>18:00</th>
+                        <th>19:00</th>
+                        <th>20:00</th>
+                        <th>21:00</th>
+                        <th>22:00</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
     </div>
 </body>
 </html>
